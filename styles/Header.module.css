@@ -1,0 +1,416 @@
+.header {
+    background-color: #1B1AFF;
+    color: #FFFFFF;
+    overflow: hidden;
+    min-height: 430px;
+}
+
+.content {
+    max-width: 1460px;
+    margin: auto;
+    position: relative;
+}
+
+.logo {
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+}
+
+.nav {
+    border-bottom: 1px solid #FFFFFF;
+}
+
+.menuWrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    padding: 40px 100px 20px;
+}
+
+
+
+.menuItems {
+    list-style-type: none;
+    display: flex;
+    padding: 0 20px;
+    align-items: center;
+    gap: 40px;
+    align-self: stretch;
+    margin: 0;
+    height: 100%;
+}
+
+.menuItem {
+    gap: 5px;
+    color: #FFFFFF;
+    position: relative;
+    display: flex;
+
+    text-transform: uppercase;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.14px;
+    height: 100%;
+    align-items: center;
+}
+
+.titleWrapper {
+    display: flex;
+    gap: 5px;
+}
+
+
+.dropdown {
+    display: flex;
+    position: absolute;
+    z-index: 999999;
+    top: 59px;
+    left: -20px;
+    background-color: #1B1AFF;
+    border: 1px solid #FFFFFF;
+    padding: 16px 20px;
+    align-items: flex-start;
+    gap: 40px;
+    transition: visibility 0s, opacity 0.3s ease-in-out;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.menuItem:hover .dropdown {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.heroWrapper {
+    display: flex;
+}
+
+.heroWrapper {
+    margin: 0 150px;
+    width: calc(100% - 150px);
+}
+
+.robohand {
+    max-width: 730px;
+    object-fit: cover;
+    width: 100%;
+    align-self: end;
+    z-index: 4;
+    animation: 1.2s ease-out 0.5s 1 slideInHand;
+    transform: translate(100%, 30%);
+    animation-fill-mode: forwards;
+}
+
+
+.heroWrapper h1 {
+    font-size: min(5vw, 73px);
+    font-weight: 500;
+    width: 50%;
+
+    animation: 1s ease-out 0s 1 slideInTitle;
+    transform: translate(-100%, 0);
+    animation-fill-mode: forwards;
+}
+
+.gear1 {
+    position: absolute;
+    z-index: 0;
+    top: -5%;
+    right: -5%;
+    width: 36vw;
+    max-width: 512px;
+    /*animation:  1s ease-out 1s 1 slideInGear1;*/
+    animation: 20s linear infinite spin;
+    /*transform: translate(100%, -100%);*/
+    animation-fill-mode: forwards;
+}
+
+.gear2 {
+    position: absolute;
+    z-index: 0;
+    bottom: -45%;
+    right: 20%;
+    width: 36vw;
+    max-width: 512px;
+    animation: 20s linear infinite spin2;
+    /*animation: 1s ease-out 1s 1 slideInGear2;*/
+    /*transform: translate(0, 100%);*/
+    animation-fill-mode: forwards;
+}
+
+.subtitleWrapper {
+    width: 100%;
+    padding: 20px 100px 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.subtitleWrapper h2 {
+    width: 35%;
+    font-size: min(1.2vw, 18px);
+    font-weight: 500;
+    letter-spacing: 0.2px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    width: 180px;
+    max-width: 180px;
+}
+
+.column a {
+    transition: 0.3s all;
+}
+
+.column a:hover {
+    transform: scale(1.015)
+}
+
+.columnTitle {
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.14px;
+}
+
+.column a {
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.13px;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(-360deg);
+        animation-fill-mode: unset;
+    }
+}
+
+@keyframes spin2 {
+    100% {
+        transform: rotate(360deg);
+        animation-fill-mode: unset;
+    }
+}
+
+@keyframes slideInHand {
+    0% {
+        transform: translate(100%, 30%);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes slideInTitle {
+    0% {
+        transform: translate(-100%, 0);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes slideInGear1 {
+    0% {
+        transform: translate(100%, -100%);
+
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes slideInGear2 {
+    0% {
+        transform: translate(0, 100%);
+
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+.burger {
+    display: none;
+    z-index: 1001;
+}
+
+.burger div{
+    width: 25px;
+    height: 3px;
+    border-radius: 5px;
+    background: #FFFFFF;
+    margin: 5px;
+    transition:all 0.3s ease;
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px,6px );
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px );
+}
+
+.navActive{
+    transform: translateX(0)!important;
+}
+.backButton {
+    display: none;
+    pointer-events: none;
+}
+
+
+@media screen and (max-width: 1124px) {
+
+    .header {
+        min-height: unset;
+    }
+
+    .menuItems {
+        position: fixed;
+        right: 0;
+        top: 0;
+        min-height: 200%;
+        flex-direction: column;
+        width: 100%;
+        background: #1B1AFF;
+        padding: 150px 0 0;
+        transform: translateX(100%);
+        transition:All 0.3s ease-in;
+        display: flex;
+        gap: 20px;
+    }
+
+    .nav {
+        border: none;
+        z-index: 5;
+    }
+
+    .menuWrapper {
+        justify-content: space-between;
+    }
+
+    .burger{
+        display: block;
+    }
+
+    .menuItem {
+        height: unset;
+    }
+
+    .heroWrapper {
+        margin: 0 120px;
+        width: calc(100% - 120px);
+    }
+
+    .heroWrapper h1 {
+        font-size: min(5vw, 73px);
+    }
+
+    .subtitleWrapper {
+        padding: 20px 120px 40px;
+    }
+
+    .subtitleWrapper h2 {
+        width: 70%;
+        font-size: 14px;
+        margin: 0;
+    }
+
+    .gear2 {
+        right: 13%;
+    }
+
+    .menuItem {
+        position: unset;
+    }
+
+    .dropdown {
+        padding: 0 30px;
+        background-color: #1B1AFF;
+        border: none;
+        position: absolute;
+        top: 150px;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .menuItem:hover .backButton {
+        position: absolute;
+        top: 100px;
+        left: 38px;
+        z-index: 4;
+        display: flex;
+        gap: 8px;
+    }
+
+    .column {
+        width: 100%;
+        padding: 10px 30px;
+        max-width: unset;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .menuWrapper {
+        padding: 10px 30px;
+        align-items: center;
+    }
+
+    .logo {
+        width: 38px;
+    }
+
+    .heroWrapper {
+        margin: 0 45px;
+        width: calc(100% - 45px);
+    }
+
+    .heroWrapper h1 {
+        font-size: min(6vw, 73px);
+    }
+
+    .subtitleWrapper {
+        padding: 20px 45px;
+    }
+
+    .subtitleWrapper h2 {
+        width: 70%;
+        font-size: 12px;
+        margin: 0;
+    }
+
+    .gear2 {
+        bottom: -20%;
+        right: 5%;
+    }
+}

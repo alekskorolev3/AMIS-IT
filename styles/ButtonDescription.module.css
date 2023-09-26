@@ -1,0 +1,57 @@
+.button {
+    display: flex;
+    padding: 10px 15px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
+    border: 1px solid #FFFFFF;
+    background-color: transparent;
+    max-width: 150px;
+    transition: all .2s;
+}
+
+.invert {
+    border: 1px solid #000000;
+}
+
+
+
+.button span {
+    font-size: 14px;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+.invert span {
+    color: #000000;
+}
+
+.button img {
+    width: unset!important;
+    height: unset!important;
+    min-height: unset!important;
+    min-width: unset!important;
+}
+
+.button:hover {
+    background: #A7F46A;
+    border: 1px solid #A7F46A;
+}
+
+.button:hover span {
+    color: #222222;
+}
+
+
+@media screen and (max-width: 1124px) {
+    .button {
+        padding: 12px 15px;
+        width: fit-content;
+        height: unset;
+    }
+
+    .button span {
+        font-size: 12px;
+    }
+}
