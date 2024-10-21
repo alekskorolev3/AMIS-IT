@@ -4,6 +4,14 @@
     padding: 50px 120px;
 }
 
+.content a {
+    color: #000000;
+    transition: 0.3s all;
+}
+
+.content a:hover {
+    color: #A7F46A;
+}
 
 .content h1 {
     font-size: 38px;

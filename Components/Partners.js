@@ -34,7 +34,7 @@ const Partners = ({partners}) => {
 
     return (
         <section className={styles.partners}>
-            <h3>Нам доверяют ведущие бренды</h3>
+            <h3>Клиенты и партнёры</h3>
 
             <AliceCarousel
                 items={items}

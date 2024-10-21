@@ -12,8 +12,7 @@
 }
 
 .logo {
-    width: 55px;
-    height: 55px;
+    width: 150px;
     cursor: pointer;
 }
 
@@ -39,6 +38,7 @@
     align-self: stretch;
     margin: 0;
     height: 100%;
+    z-index: 9998;
 }
 
 .menuItem {
@@ -67,7 +67,7 @@
     display: flex;
     position: absolute;
     z-index: 999999;
-    top: 59px;
+    top: 49px;
     left: -20px;
     background-color: #1B1AFF;
     border: 1px solid #FFFFFF;
@@ -246,7 +246,7 @@
 
 .burger {
     display: none;
-    z-index: 1001;
+    z-index: 9999;
 }
 
 .burger div{
@@ -320,6 +320,8 @@
 
     .burger{
         display: block;
+        z-index: 9999;
+        position: relative;
     }
 
     .menuItem {
@@ -387,7 +389,7 @@
     }
 
     .logo {
-        width: 38px;
+        width: 110px;
     }
 
     .heroWrapper {

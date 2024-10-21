@@ -12,7 +12,7 @@ const Header = ({menu, short}) => {
             <div className={styles.content}>
                 <div className={styles.menuWrapper}>
                     <Link href="/">
-                        <img src="/logo.svg" alt="logo" className={styles.logo}/>
+                        <img src="/amis-it-horiz.svg" alt="logo" className={styles.logo}/>
                     </Link>
                     <div className={styles.nav}>
                         <ul className={styles.menuItems}>
@@ -89,10 +89,10 @@ const Header = ({menu, short}) => {
                             <div className={styles.subtitleWrapper}>
                                 <h2>{Subtitle}</h2>
 
-                                <ButtonMain link={{Title: "Связаться с нами", URL: "/"}}/>
+                                <ButtonMain link={{Title: "Связаться с нами", URL: "/contacts"}}/>
                             </div>
 
-                            <img src="/gear.svg" alt="gear" className={styles.gear1 + " " + styles.spin}/>
+                            <img src="/gear.svg" alt="gear" className={styles.gear1}/>
                             <img src="/gear.svg" alt="gear" className={styles.gear2}/>
                         </>
                         :
@@ -100,7 +100,7 @@ const Header = ({menu, short}) => {
                             <div className={styles.subtitleWrapper}>
                                 <h2>{Subtitle}</h2>
 
-                                <ButtonMain link={{Title: "Связаться с нами", URL: "/"}}/>
+                                <ButtonMain link={{Title: "Связаться с нами", URL: "/contacts"}}/>
                             </div>
                             <img src="/gear.svg" alt="gear" className={styles.gear1 + " " + styles.spin} style={{maxWidth: "420px"}}/>
                         </>

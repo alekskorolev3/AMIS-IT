@@ -47,6 +47,80 @@
     gap: 30px;
 }
 
+.contactsWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-end;
+}
+
+.phoneNumbersWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-end;
+}
+
+.phoneNumbersInnerWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.phoneNumber {
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 400;
+    transition: 0.3s ease all;
+}
+
+.phoneNumber:hover {
+    color: #A7F46A;
+}
+
+.contactsColumnTitle {
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.addressWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: end;
+
+    color: #FFFFFF;
+    font-size: 14px;
+
+    text-align: end;
+}
+
+.addressWrapperInner {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    max-width: 300px;
+    align-items: center;
+}
+
+.addressWrapperInner img{
+    width: 20px;
+    height: 20px;
+}
+
+
+.email {
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 400;
+    transition: 0.3s ease all;
+}
+
+.email:hover {
+    color: #A7F46A;
+}
+
 .rowWrapper {
     display: flex;
     padding: 0 12px;
@@ -151,13 +225,17 @@
     filter: none;
 }
 
+.logo {
+    width: 150px;
+}
+
 @media screen and (max-width: 1124px){
     .content {
         flex-direction: column;
     }
 
     .logo {
-        width: 38px;
+        width: 120px;
     }
 
     .rowTitle {
